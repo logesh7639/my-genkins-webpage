@@ -4,8 +4,8 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/logesh7639/my-jenkins-webpage.git',
-                    credentialsId: 'your-jenkins-credential-id'
+                    url: 'git@github.com:logesh7639/my-jenkins-webpage.git',
+                    credentialsId: 'logesh-ssh'
             }
         }
         stage('Deploy to S3') {
@@ -17,3 +17,4 @@ pipeline {
         }
     }
 }
+
